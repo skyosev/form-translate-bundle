@@ -18,7 +18,7 @@ class FormTypesCompilerPass implements CompilerPassInterface
         $container
             ->findDefinition('shapecode_raas.doctrine.repository_factory')
             ->setClass('SKyosev\FormTranslateBundle\Repository\Factory')
-            ->addMethodCall('setLocaleProvider', [new Reference('locale_provider')]);
+            ->addMethodCall('setLocaleProvider', [new Reference('form_trans.locale_provider')]);
 
         foreach (array_keys($container->findTaggedServiceIds('form.type')) as $service_id) {
             $definition = $container->findDefinition($service_id);
