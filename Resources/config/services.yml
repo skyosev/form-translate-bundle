@@ -1,0 +1,10 @@
+services:
+
+    form_trans.locale_provider:
+        class:     SKyosev\FormTranslateBundle\Locale\Provider
+        arguments: ['@request_stack', '%default_locale%', '%locales%']
+
+    form_trans.data_mapper:
+        class:     SKyosev\FormTranslateBundle\Form\DataMapper
+        arguments: ['@doctrine.orm.entity_manager', '@form_trans.locale_provider']
+

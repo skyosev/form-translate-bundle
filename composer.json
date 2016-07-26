@@ -1,0 +1,21 @@
+{
+    "name": "skyosev/form-translate-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stoyan Kyosev",
+            "email": "stoyankyosev@gmail.com"
+        }
+    ],
+    "type": "symfony-bundle",
+    "autoload": {
+        "psr-4": {
+            "SKyosev\\FormTranslateBundle\\": ""
+        }
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/symfony": "3.1.*",
+        "stof/doctrine-extensions-bundle": "^1.2"
+    }
+}
